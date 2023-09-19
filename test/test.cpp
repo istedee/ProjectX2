@@ -16,8 +16,8 @@ FUZZ_TEST(const uint8_t *data, size_t size) {
   FuzzedDataProvider fuzzed_data(data, size);
 
   // Define and mutate input variables
-  float a = fuzzed_data.ConsumeIntegral<float>();
-  float b = fuzzed_data.ConsumeIntegral<float>();
+  float a = fuzzed_data.ConsumeFloatingPoint<float>();
+  float b = fuzzed_data.ConsumeFloatingPoint<float>();
   std::string c = fuzzed_data.ConsumeRandomLengthString();
 
   // Call the target function with the mutated inputs
