@@ -18,4 +18,4 @@ You also need to edit line 25 in Dockerfile with your github repository link.
 
 **Step 4**
 
-Start writing your actions workflow file and name it fuzzing.yml
+Start writing your actions workflow file and name it fuzzing.yml.
