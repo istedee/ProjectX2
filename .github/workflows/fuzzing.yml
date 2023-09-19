@@ -1,0 +1,25 @@
+name: build and run fuzzer
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  buildandrun:
+    name: Build and run docker 
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: |
+              chmod +x ${GITHUB_WORKSPACE}/build.sh
+              ${GITHUB_WORKSPACE}/build.sh
+      shell: bash
+    - name: Run container
+      run: | 
+              chmod +x ${GITHUB_WORKSPACE}/run.sh
+              ${GITHUB_WORKSPACE}/run.sh
