@@ -5,6 +5,7 @@
 #include <cstring>
 
 using namespace std;
+// TEST
 
 float calculator(float num1, char op, float num2) {
     float result;
