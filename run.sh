@@ -1,5 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
 source name.sh
 
-docker run --rm ${IMAGE}:latest
+docker run --rm ${IMAGE}
 
