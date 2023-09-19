@@ -13,11 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: |
-              chmod +x ${GITHUB_WORKSPACE}/build.sh
-              ${GITHUB_WORKSPACE}/build.sh
-      shell: bash
+      run: docker build . --tag fuzzer
     - name: Run container
-      run: | 
-              chmod +x ${GITHUB_WORKSPACE}/run.sh
-              ${GITHUB_WORKSPACE}/run.sh
+      run: docker run fuzzer
