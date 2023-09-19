@@ -1,7 +1,7 @@
 #include <iostream>
 #include "src/calculator.h"
 
-float main() {
+int main() {
     // Test case 1: Addition
     float result1 = calculator(5.0, '+', 3.0);
     if (result1 == 8.0) {
