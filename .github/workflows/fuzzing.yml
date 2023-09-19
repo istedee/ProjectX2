@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  buildandrun:
+  build:
     name: Build and run docker 
     runs-on: ubuntu-latest
     steps:
